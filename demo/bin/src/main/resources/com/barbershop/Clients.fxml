@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.stage.Screen?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Region?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="com.barbershop.views.clients.Clients">
+        <fx:define>
+            <Screen fx:factory="getPrimary" fx:id="screen"/>
+        </fx:define>
+   <children>
+        <HBox prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" alignment="CENTER">
+            <children>
+              <VBox fx:id="leftMenu" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width/2}" alignment="CENTER">
+                 <TableView fx:id="table" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width/2}" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <columns>
+                    <TableColumn fx:id="id" prefWidth="${screen.visualBounds.width/2/4}" text="ID"/>
+                    <TableColumn fx:id="firstName" prefWidth="${screen.visualBounds.width/2/4}" text="First Name" />
+                    <TableColumn fx:id="lastName" prefWidth="${screen.visualBounds.width/2/4}" text="Last Name" />
+                    <TableColumn fx:id="phone" prefWidth="${screen.visualBounds.width/2/4}" text="Phone" />
+                  </columns>
+                </TableView>
+              </VBox>
+              <VBox fx:id="rightMenu" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width/2}" alignment="TOP_CENTER">
+                <HBox fx:id="topMenu" alignment="CENTER_LEFT" prefHeight="50" spacing="10" style="-fx-background-color: lightseagreen; -fx-padding: 10">
+                    <children>
+                        <TextField fx:id="searchField" prefWidth="${screen.visualBounds.width/2.5}" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" promptText="Search..." style="-fx-background-color: whitesmoke"/>  
+                        <Button fx:id="searchButton" onAction="#onActionSearchButton" graphicTextGap="10" style="-fx-alignment: CENTER; -fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 20; -fx-padding: 0;" >
+                                <text>🔎</text>
+                                <tooltip> 
+                                <Tooltip text="Search">
+                                    <font>
+                                        <Font size="13"/>
+                                    </font>
+                                </Tooltip>
+                                </tooltip>
+                        </Button>
+                    </children>
+                    </HBox>
+                <ListView fx:id="selectionList" prefHeight="${screen.visualBounds.height-120}" style="-fx-background-color: #ededed;">
+                </ListView>
+                <VBox prefHeight="10" />
+                <HBox spacing="10" alignment="CENTER">
+                    <Button fx:id="addButton" text="New Client" onAction="#onActionAddButton" style="-fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: GREEN; -fx-text-fill: WHITE ; -fx-font-weight: bold; -fx-font-size: 13;"/>
+                    <Button fx:id="updateButton" text="Update Client" onAction="#onActionUpdateButton" style="-fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: BLUE; -fx-text-fill: WHITE ; -fx-font-weight: bold; -fx-font-size: 13;"/>
+                    <Button fx:id="deleteButton" text="Delete Client" onAction="#onActionDeleteButton" style="-fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: RED; -fx-text-fill: WHITE ; -fx-font-weight: bold; -fx-font-size: 13;"/>
+                </HBox>
+              </VBox>
+            </children>
+        </HBox>
+   </children>
+</AnchorPane>
+
+

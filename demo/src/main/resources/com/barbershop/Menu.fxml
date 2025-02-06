@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.stage.Screen?>
+<?import javafx.scene.layout.Region?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.barbershop.views.Menu">
+    <fx:define>
+        <Screen fx:factory="getPrimary" fx:id="screen"/>
+    </fx:define>
+    <children>
+
+        <!-- Left Pane for the Menu -->
+        <Pane fx:id="menuBar" prefHeight="400.0" prefWidth="69.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <!-- Content for the left pane -->
+            <!-- This is the menu of the app -->
+            <children>
+                <VBox alignment="TOP_CENTER" spacing="20">
+                    <Region HBox.hgrow="ALWAYS" />
+
+                    <!-- Buttons for the top part of the menu -->
+                    <Button fx:id="agendaButton" prefHeight="30" graphicTextGap="10" onAction="#handleAgendaButtonClick" style="-fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 30;">
+                        <text>📅</text>
+                        <tooltip> 
+                            <Tooltip text="Agenda">
+                                <font>
+                                    <Font size="13"/>
+                                </font>
+                            </Tooltip>
+                        </tooltip>
+                    </Button>
+
+                    <Button fx:id="clientsButton" prefHeight="30" graphicTextGap="10" onAction="#handleClientsButtonClick" style="-fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 30;">
+                        <text>👥</text>
+                        <tooltip> 
+                            <Tooltip text="Clients">
+                                <font>
+                                    <Font size="13"/>
+                                </font>
+                            </Tooltip>
+                        </tooltip>
+                    </Button>
+
+                    <Button fx:id="stockButton" prefHeight="30" graphicTextGap="10" onAction="#handleStockButtonClick" style="-fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 30;">
+                        <text>📦</text>
+                        <tooltip> 
+                            <Tooltip text="Stock">
+                                <font>
+                                    <Font size="13"/>
+                                </font>
+                            </Tooltip>
+                        </tooltip>
+                    </Button>
+
+                    <Button fx:id="servicesButton" prefHeight="30" graphicTextGap="10" onAction="#handleServicesButtonClick" style="-fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 30;">
+                        <text>✂</text>
+                        <tooltip> 
+                            <Tooltip text="Services">
+                                <font>
+                                    <Font size="13"/>
+                                </font>
+                            </Tooltip>
+                        </tooltip>
+                    </Button>
+
+                    <Region HBox.hgrow="ALWAYS" prefHeight="${screen.visualBounds.height/6}"/>
+                    
+                    <!-- Bottom Center VBox for the Bottom Buttons -->
+                    <VBox alignment="BOTTOM_CENTER" spacing="20" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                        <!-- Buttons for the bottom part of the menu -->
+                        <Button fx:id="themeButton" prefHeight="30" graphicTextGap="10" onAction="#handleThemeButtonClick" style="-fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 30;">
+                            <text>☀</text>
+                            <tooltip> 
+                                <Tooltip text="Theme">
+                                    <font>
+                                        <Font size="13"/>
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                        </Button>
+
+                        <Button fx:id="exitButton" prefHeight="30" graphicTextGap="10" onAction="#handleExitButtonClick" style="-fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 30;">
+                            <text>🚪</text>
+                            <tooltip> 
+                                <Tooltip text="Exit">
+                                    <font>
+                                        <Font size="13"/>
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                        </Button>
+
+                        <Region HBox.hgrow="ALWAYS" />
+                    </VBox>
+
+                </VBox>
+            </children>
+        </Pane>
+
+        
+
+        <!-- Right Pane for Content -->
+        <Pane fx:id="contentPane" style="-fx-background-color: whitesmoke;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="69.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <!-- Content for the right pane -->
+            <!-- Change with the selected menu -->
+        </Pane>
+
+    </children>
+</AnchorPane>

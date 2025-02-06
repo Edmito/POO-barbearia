@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.stage.Screen?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.barbershop.views.calendar.Calendar">
+        <fx:define>
+            <Screen fx:factory="getPrimary" fx:id="screen"/>
+        </fx:define>
+   <children>
+        <HBox fx:id="leftMenu" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}">
+            <children>
+              <VBox prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width/1.62}" alignment="TOP_CENTER">
+                    <children>
+                        <AnchorPane>  
+
+                        <FlowPane alignment="CENTER" fx:id="calendar" hgap="10.0" layoutX="14.0" layoutY="116.0" prefHeight="498.0" prefWidth="${screen.visualBounds.width/2+80}" vgap="5.0" />
+                        
+                        <HBox fx:id="calendarHead" alignment="CENTER" layoutX="28.0" layoutY="20.0" prefHeight="40.0" prefWidth="${screen.visualBounds.width/2+50}"  spacing="5.0"  style="-fx-background-color: #188c86;">
+                            <children>
+                                <Button fx:id="backOneMonth" mnemonicParsing="false" onAction="#backOneMonth" text="←" />
+                                <HBox alignment="CENTER" prefWidth="520.0" spacing="5.0">
+                                    <children>
+                                        <Text fx:id="month" text="####" style="-fx-fill: whitesmoke">
+                                            <font>
+                                            <Font size="18.0" style="bold"/>
+                                            </font>
+                                        </Text>
+                                        <Text fx:id="year" text="####" style="-fx-fill: whitesmoke">
+                                            <font>
+                                            <Font size="18.0" style="bold"/>
+                                            </font>
+                                        </Text>
+                                    </children>
+                                    </HBox>
+                                <Button fx:id="forwardOneMonth" mnemonicParsing="false" onAction="#forwardOneMonth" text="→"/>
+                            </children>
+                        </HBox>
+
+                        <HBox fx:id="calendarHead2" alignment="CENTER" layoutX="28.0" layoutY="77.0" prefHeight="40.0" prefWidth="${screen.visualBounds.width/2+50}" spacing="48" style="-fx-background-color: LIGHTSEAGREEN;">
+                            <children>
+                                <Text text="Sunday" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;"/>
+                                <Text text="Monday" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;" />
+                                <Text text="Tuesday" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;"/>
+                                <Text text="Wednesday" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;"/>
+                                <Text text="Thursday" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;"/>
+                                <Text text="Friday" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;"/>
+                                <Text text="Saturday" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;"/>
+                            </children>
+                        </HBox>
+
+                        </AnchorPane>
+                    </children>
+              </VBox>
+
+              <VBox fx:id="rightMenu" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width/3}" style="-fx-background-color: LIGHTGREY;">
+                <children>
+                    <HBox fx:id="topMenu" alignment="CENTER_LEFT" prefHeight="50" spacing="5" style="-fx-background-color: lightseagreen; -fx-padding: 10">
+                    <children>
+                        <TextField fx:id="searchField" prefWidth="${screen.visualBounds.width/3-50}" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" promptText="Search..." style="-fx-background-color: whitesmoke"/>  
+                        <Button fx:id="searchButton" onAction="#onActionSearchButton" graphicTextGap="10" style="-fx-alignment: CENTER; -fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 20; -fx-padding: 0;" >
+                                <text>🔎</text>
+                                <tooltip> 
+                                <Tooltip text="Search">
+                                    <font>
+                                        <Font size="13"/>
+                                    </font>
+                                </Tooltip>
+                                </tooltip>
+                        </Button>
+                    </children>
+                    </HBox>
+                        <ListView fx:id="selectionList" prefHeight="${screen.visualBounds.height-120}" style="-fx-background-color: #ededed;">
+                        </ListView>
+                    <HBox fx:id="bottomMenu" alignment="CENTER_LEFT" prefHeight="50" style="-fx-background-color: lightseagreen; -fx-padding: 10">
+                        <children>
+                            <!-- Left-aligned button -->
+                            <HBox style="-fx-padding: 5" />
+                            <Button fx:id="backButton" onAction="#onActionBackButton" graphicTextGap="10"
+                                    style="-fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 20; -fx-padding: 0;" >
+                                <text>⏮</text>
+                                <tooltip> 
+                                    <Tooltip text="Go Back">
+                                        <font>
+                                            <Font size="13"/>
+                                        </font>
+                                    </Tooltip>
+                                </tooltip>
+                            </Button>
+                            <Region HBox.hgrow="ALWAYS" /> <!-- Empty region to push the next buttons to the right -->
+                            <!-- Right-aligned buttons -->
+                            <Button fx:id="addButton" onAction="#onActionAddButton" graphicTextGap="10"
+                                    style="-fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 20; -fx-padding: 0;" >
+                                <text>➕</text>
+                                <tooltip> 
+                                    <Tooltip text="Add">
+                                        <font>
+                                            <Font size="13"/>
+                                        </font>
+                                    </Tooltip>
+                                </tooltip>
+                            </Button>
+                            <HBox  style="-fx-padding: 5" />
+                            <Button fx:id="invoiceButton" onAction="#onActionInvoiceButton" graphicTextGap="10" style="-fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 20; -fx-padding: 0;" >
+                                <text>📄</text>
+                                <tooltip> 
+                                    <Tooltip text="Generate invoice">
+                                        <font>
+                                            <Font size="13"/>
+                                        </font>
+                                    </Tooltip>
+                                </tooltip>
+                            </Button>
+                            <HBox style="-fx-padding: 5" />
+                            <Button fx:id="editButton" onAction="#onActionEditButton" graphicTextGap="10"
+                                    style="-fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 20; -fx-padding: 0;" >
+                                <text>📝</text>
+                                <tooltip> 
+                                    <Tooltip text="Edit">
+                                        <font>
+                                            <Font size="13"/>
+                                        </font>
+                                    </Tooltip>
+                                </tooltip>
+                            </Button>
+                            <HBox style="-fx-padding: 5" />
+                            <Button fx:id="deleteButton" onAction="#onActionDeleteButton" graphicTextGap="10"
+                                    style="-fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 20; -fx-padding: 0;" >
+                                <text>🚫</text>
+                                <tooltip> 
+                                    <Tooltip text="Delete">
+                                        <font>
+                                            <Font size="13"/>
+                                        </font>
+                                    </Tooltip>
+                                </tooltip>
+                            </Button>
+                            <HBox  style="-fx-padding: 5" />
+                        </children>
+                    </HBox>
+
+                    </children>
+              </VBox>
+            </children>
+        </HBox>
+   </children>
+</AnchorPane>
+
+
