@@ -80,7 +80,7 @@ public class DeleteService implements Initializable {
             Stage stage = new Stage();
             stage.getIcons().add(new Image(DeleteService.class.getResourceAsStream("service.png")));
             stage.setScene(scene);
-            stage.setTitle("Delete Service");
+            stage.setTitle("Excluir Serviço");
             stage.initModality(Modality.APPLICATION_MODAL); // Block interaction with other windows until closed
             stage.setResizable(false); // Make the stage not resizable
             stage.showAndWait(); // Show the stage and wait for it to be closed

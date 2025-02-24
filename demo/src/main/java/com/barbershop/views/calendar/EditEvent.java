@@ -86,7 +86,7 @@ public class EditEvent implements Initializable {
         if (!PaternController.isValidName(clientFirstNameField.getText()) || 
             !PaternController.isValidName(clientLastNameField.getText()) || 
             !PaternController.isValidPhoneNumber(clientPhoneField.getText())) {
-            AlertController.showWarning("Invalid Input", "Please enter a valid input!");
+            AlertController.showWarning("Entrada Inválida", "Por favor, insira uma entrada válida!");
             return;
         }
     
@@ -123,7 +123,7 @@ public class EditEvent implements Initializable {
         for (Event e : GetData.AllEvents) {
             if (e.getDateTime().equals(newEvent.getDateTime()) && 
                 e.getEventId() != Calendar.selectedEvent.getEventId()) {
-                AlertController.showWarning("Conflict", "The new event conflicts with an existing event.");
+                AlertController.showWarning("Conflito", "O novo evento conflita com um evento existente.");
                 return;
             }
         }
@@ -271,7 +271,7 @@ public class EditEvent implements Initializable {
         if (!GetData.AllServices.isEmpty()) {
             service.setValue(GetData.AllServices.get(0).getName());
         } else {
-            service.setValue("none");
+            service.setValue("nenhum serviço");
         }
 
         //Listner on conbo box service
@@ -390,7 +390,7 @@ public class EditEvent implements Initializable {
             Stage stage = new Stage();
             stage.getIcons().add(new Image(EditEvent.class.getResourceAsStream("add.png")));
             stage.setScene(scene);
-            stage.setTitle("Update Event");
+            stage.setTitle("Atualizar Evento");
             stage.initModality(Modality.APPLICATION_MODAL); // Block interaction with other windows until closed
             stage.setResizable(false); // Make the stage not resizable
             stage.showAndWait(); // Show the stage and wait for it to be closed

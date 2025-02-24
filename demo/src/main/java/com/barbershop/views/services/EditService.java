@@ -50,7 +50,7 @@ public class EditService implements Initializable {
     //add product button
     public void update() {
         if (serviceNameField.getText().isEmpty()) {
-            AlertController.showWarning("Invalid Input", "Please enter a valid input!");
+            AlertController.showWarning("Entrada Inválida", "Por favor, insira uma entrada válida!");
         } else {
             newService.setName(serviceNameField.getText());
             newService.setDescription(descriptionField.getText());
@@ -113,7 +113,7 @@ public class EditService implements Initializable {
             @Override
             public String toString(Double value) {
                 // Format value to "00.00" with dot as the decimal separator
-                return String.format(Locale.ENGLISH, "%.2f", value);
+                return String.format(Locale.forLanguageTag("pt-BR"), "%.2f", value);
             }
 
             @Override
@@ -140,7 +140,7 @@ public class EditService implements Initializable {
             Stage stage = new Stage();
             stage.getIcons().add(new Image(EditService.class.getResourceAsStream("service.png")));
             stage.setScene(scene);
-            stage.setTitle("Edit Service");
+            stage.setTitle("Editar Serviço");
             stage.initModality(Modality.APPLICATION_MODAL); // Block interaction with other windows until closed
             stage.setResizable(false); // Make the stage not resizable
             stage.showAndWait(); // Show the stage and wait for it to be closed

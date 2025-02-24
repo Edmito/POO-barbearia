@@ -108,7 +108,7 @@ public class GenerateInvoice implements Initializable {
             }
         }
         if (selected_product.getQuantity() == 0) {
-            AlertController.showWarning("Stock Alert", "No stock left in product " + selected_product.getName() + "!");
+            AlertController.showWarning("Alerta de Estoque", "Sem estoque do produto " + selected_product.getName() + "!");
         }
 
     }
@@ -219,7 +219,7 @@ public class GenerateInvoice implements Initializable {
             //close the wizard
             closeWindow();
         } catch (StockAlert noProduct) {
-            AlertController.showError("Stock Alert!", noProduct.getMessage());
+            AlertController.showError("Alerta de Estoque!", noProduct.getMessage());
         }
     }
 
@@ -251,7 +251,7 @@ public class GenerateInvoice implements Initializable {
             serviceField.setValue(GetData.AllServices.get(0).getName());
             selected_service = GetData.AllServices.get(0);
         } else {
-            serviceField.setValue("none");
+            serviceField.setValue("nenhum serviço disponível");
         }
 
         //Listner on conbo box service
@@ -274,7 +274,7 @@ public class GenerateInvoice implements Initializable {
             productField.setValue(GetData.AllProducts.get(0).getName());
             selected_product = GetData.AllProducts.get(0);
         } else {
-            productField.setValue("none");
+            productField.setValue("nenhum produto disponível");
         }
 
         //Listner on conbo box service
@@ -384,7 +384,7 @@ public class GenerateInvoice implements Initializable {
             Stage stage = new Stage();
             stage.getIcons().add(new Image(GenerateInvoice.class.getResourceAsStream("invoice.png")));
             stage.setScene(scene);
-            stage.setTitle("Generate an invoice");
+            stage.setTitle("Gerar uma fatura");
             stage.initModality(Modality.APPLICATION_MODAL); // Block interaction with other windows until closed
             stage.setResizable(false); // Make the stage not resizable
             stage.showAndWait(); // Show the stage and wait for it to be closed

@@ -49,7 +49,7 @@ public class AddService implements Initializable {
     //add product button
     public void addProduct() {
         if (serviceNameField.getText().isEmpty()) {
-            AlertController.showWarning("Invalid Input", "Please enter a valid input!");
+            AlertController.showWarning("Entrada Inválida", "Por favor, insira uma entrada válida!");
         } else {
             Service newService = new Service(serviceNameField.getText(), descriptionField.getText(), priceField.getValue());
             newService.setServiceId(AddData.AddService(newService));
@@ -133,7 +133,7 @@ public class AddService implements Initializable {
             Stage stage = new Stage();
             stage.getIcons().add(new Image(AddService.class.getResourceAsStream("service.png")));
             stage.setScene(scene);
-            stage.setTitle("Add Service");
+            stage.setTitle("Adicionar Serviço");
             stage.initModality(Modality.APPLICATION_MODAL); // Block interaction with other windows until closed
             stage.setResizable(false); // Make the stage not resizable
             stage.showAndWait(); // Show the stage and wait for it to be closed

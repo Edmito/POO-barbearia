@@ -48,7 +48,7 @@ public class EditClient implements Initializable {
     //add product button
     public void update() {
         if (!PaternController.isValidName(clientFirstNameField.getText()) || !PaternController.isValidName(clientLastNameField.getText()) || !PaternController.isValidPhoneNumber(clientPhoneField.getText())) {
-            AlertController.showWarning("Invalid Input", "Please enter a valid input!");
+            AlertController.showWarning("Entrada Inválida", "Por favor, insira uma entrada válida!");
         } else {
             newClient.setFirst_name(clientFirstNameField.getText());
             newClient.setLast_name(clientLastNameField.getText());
@@ -120,7 +120,7 @@ public class EditClient implements Initializable {
             Stage stage = new Stage();
             stage.getIcons().add(new Image(EditClient.class.getResourceAsStream("client.png")));
             stage.setScene(scene);
-            stage.setTitle("Edit Client");
+            stage.setTitle("Editar Cliente");
             stage.initModality(Modality.APPLICATION_MODAL); // Block interaction with other windows until closed
             stage.setResizable(false); // Make the stage not resizable
             stage.showAndWait(); // Show the stage and wait for it to be closed

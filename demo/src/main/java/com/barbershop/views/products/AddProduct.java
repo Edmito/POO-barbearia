@@ -51,7 +51,7 @@ public class AddProduct implements Initializable {
     //add product button
     public void addProduct() {
         if (productNameField.getText().isEmpty()) {
-            AlertController.showWarning("Invalid Input", "Please enter a valid input!");
+            AlertController.showWarning("Entrada Inválida", "Por favor, insira uma entrada válida!");
         } else {
             Product newProduct = new Product(productNameField.getText(), descriptionField.getText(), quantityField.getValue(), priceField.getValue());
             newProduct.setProductId(AddData.AddProduct(newProduct));
@@ -131,7 +131,7 @@ public class AddProduct implements Initializable {
             @Override
             public String toString(Double value) {
                 // Format value to "00.00" with dot as the decimal separator
-                return String.format(Locale.ENGLISH, "%.2f", value);
+                return String.format(Locale.forLanguageTag("pt-BR"), "%.2f", value);
             }
 
             @Override
@@ -158,7 +158,7 @@ public class AddProduct implements Initializable {
             Stage stage = new Stage();
             stage.getIcons().add(new Image(AddProduct.class.getResourceAsStream("product.png")));
             stage.setScene(scene);
-            stage.setTitle("Add Product");
+            stage.setTitle("Adicionar Produto");
             stage.initModality(Modality.APPLICATION_MODAL); // Block interaction with other windows until closed
             stage.setResizable(false); // Make the stage not resizable
             stage.showAndWait(); // Show the stage and wait for it to be closed

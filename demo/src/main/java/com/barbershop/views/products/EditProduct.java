@@ -52,7 +52,7 @@ public class EditProduct implements Initializable {
     //add product button
     public void update() {
         if (productNameField.getText().isEmpty()) {
-            AlertController.showWarning("Invalid Input", "Please enter a valid input!");
+            AlertController.showWarning("Entrada Inválida", "Por favor, insira uma entrada válida!");
         } else {
             newProduct.setName(productNameField.getText());
             newProduct.setDescription(descriptionField.getText());
@@ -137,7 +137,7 @@ public class EditProduct implements Initializable {
             @Override
             public String toString(Double value) {
                 // Format value to "00.00" with dot as the decimal separator
-                return String.format(Locale.ENGLISH, "%.2f", value);
+                return String.format(Locale.forLanguageTag("pt-BR"), "%.2f", value);
             }
 
             @Override
@@ -163,7 +163,7 @@ public class EditProduct implements Initializable {
             Stage stage = new Stage();
             stage.getIcons().add(new Image(EditProduct.class.getResourceAsStream("product.png")));
             stage.setScene(scene);
-            stage.setTitle("Edit Product");
+            stage.setTitle("Editar Produto");
             stage.initModality(Modality.APPLICATION_MODAL); // Block interaction with other windows until closed
             stage.setResizable(false); // Make the stage not resizable
             stage.showAndWait(); // Show the stage and wait for it to be closed

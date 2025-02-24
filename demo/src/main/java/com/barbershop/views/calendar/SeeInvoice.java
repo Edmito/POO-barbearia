@@ -114,7 +114,7 @@ public class SeeInvoice implements Initializable {
             Stage stage = new Stage();
             stage.getIcons().add(new Image(SeeInvoice.class.getResourceAsStream("invoice.png")));
             stage.setScene(scene);
-            stage.setTitle("Invoice");
+            stage.setTitle("Fatura");
             stage.initModality(Modality.APPLICATION_MODAL); // Block interaction with other windows until closed
             stage.setResizable(false); // Make the stage not resizable
             stage.showAndWait(); // Show the stage and wait for it to be closed

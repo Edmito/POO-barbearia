@@ -99,11 +99,11 @@ public class Menu {
     public void initialize() {
         if (!Colors.isDark) {
             themeButton.setText("🌙");
-            themeButton.setTooltip(new Tooltip("Switch to Dark Mode."));
+            themeButton.setTooltip(new Tooltip("Mudar para o Modo Escuro."));
             themeButton.getTooltip().setFont(new Font(13));
         } else {
             themeButton.setText("☀");
-            themeButton.setTooltip(new Tooltip("Switch to Light Mode."));
+            themeButton.setTooltip(new Tooltip("Mudar para o Modo Claro."));
             themeButton.getTooltip().setFont(new Font(13));
         }
         menuBar.setStyle("-fx-background-color: " + Colors.primary + ";");

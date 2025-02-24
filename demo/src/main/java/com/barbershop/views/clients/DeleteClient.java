@@ -80,7 +80,7 @@ public class DeleteClient implements Initializable {
             Stage stage = new Stage();
             stage.getIcons().add(new Image(DeleteClient.class.getResourceAsStream("client.png")));
             stage.setScene(scene);
-            stage.setTitle("Delete Client");
+            stage.setTitle("Excluir Cliente");
             stage.initModality(Modality.APPLICATION_MODAL); // Block interaction with other windows until closed
             stage.setResizable(false); // Make the stage not resizable
             stage.showAndWait(); // Show the stage and wait for it to be closed

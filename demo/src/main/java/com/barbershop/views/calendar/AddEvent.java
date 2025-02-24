@@ -75,7 +75,7 @@ public class AddEvent implements Initializable {
     //add event button
     public void addEvent() {
         if (!PaternController.isValidName(clientFirstNameField.getText()) || !PaternController.isValidName(clientLastNameField.getText()) || !PaternController.isValidPhoneNumber(clientPhoneField.getText())) {
-            AlertController.showWarning("Invalid Input", "Please enter a valid input!");
+            AlertController.showWarning("Entrada Inválida", "Por favor, insira uma entrada válida!");
         } else if (selected_client != null) {
             boolean found = false;
             for (Client c : GetData.AllClients) {
@@ -101,7 +101,7 @@ public class AddEvent implements Initializable {
         // Check if the new event conflicts with existing events
         if (newEvent != null) {
             if (newEvent.getDateTime().isBefore(LocalDateTime.now())) {
-                AlertController.showWarning("Invalid Date", "The event date must be after the current date and time!");
+                AlertController.showWarning("Data Inválida", "A data do evento deve ser após a data e hora atuais!");
             } else {
                 boolean hasConflict = false;
                 for (Event e : GetData.AllEvents) {
@@ -112,7 +112,7 @@ public class AddEvent implements Initializable {
                 }
                 // If there is a conflict, show an alert
                 if (hasConflict) {
-                    AlertController.showWarning("Conflict", "The new event conflicts with an existing event.");
+                    AlertController.showWarning("Conflito", "O novo evento conflita com um evento existente.");
                     return;
                 } else {
                     newEvent.setClientId(selected_client.getClient_id());
@@ -208,7 +208,7 @@ public class AddEvent implements Initializable {
                 descriptionField.setText(selected_service.getDescription());
             }
         } else {
-            service.setValue("none");
+            service.setValue("nenhum");
         }
 
         //Listner on conbo box service
@@ -341,7 +341,7 @@ public class AddEvent implements Initializable {
             Stage stage = new Stage();
             stage.getIcons().add(new Image(AddEvent.class.getResourceAsStream("add.png")));
             stage.setScene(scene);
-            stage.setTitle("Add Event");
+            stage.setTitle("Adicionar Evento");
             stage.initModality(Modality.APPLICATION_MODAL); // Block interaction with other windows until closed
             stage.setResizable(false); // Make the stage not resizable
             stage.showAndWait(); // Show the stage and wait for it to be closed

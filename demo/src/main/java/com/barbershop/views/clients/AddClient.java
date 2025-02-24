@@ -47,7 +47,7 @@ public class AddClient implements Initializable {
     //add product button
     public void addProduct() {
         if (!PaternController.isValidName(clientFirstNameField.getText()) || !PaternController.isValidName(clientLastNameField.getText()) || !PaternController.isValidPhoneNumber(clientPhoneField.getText())) {
-            AlertController.showWarning("Invalid Input", "Please enter a valid input!");
+            AlertController.showWarning("Entrada Inválida", "Por favor, insira uma entrada válida!");
         } else {
             Client newClient = new Client(clientFirstNameField.getText(), clientLastNameField.getText(), Integer.parseInt(clientPhoneField.getText()), new ArrayList<>(), new ArrayList<>());
             newClient.setClient_id(AddData.AddClient(newClient));
@@ -114,7 +114,7 @@ public class AddClient implements Initializable {
             Stage stage = new Stage();
             stage.getIcons().add(new Image(AddClient.class.getResourceAsStream("client.png")));
             stage.setScene(scene);
-            stage.setTitle("Add Client");
+            stage.setTitle("Adicionar Cliente");
             stage.initModality(Modality.APPLICATION_MODAL); // Block interaction with other windows until closed
             stage.setResizable(false); // Make the stage not resizable
             stage.showAndWait(); // Show the stage and wait for it to be closed
