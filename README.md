@@ -18,7 +18,7 @@ Projeto em Java para a matéria de POO. Um sistema para barbearia.
    cd demo
    ```
 
-2. ** Importe o projeto no Eclipse:**
+2. **Importe o projeto no Eclipse:**
 
    - Abra o Eclipse
    - Clique em `File` > `Import` > `Maven` > `Existing Maven Projects` > `Next`
@@ -36,8 +36,8 @@ As dependências do projeto estão no arquivo `pom.xml` e são gerenciadas pelo 
 
 ## Estrutura do Projeto
 
-`src/main/java`: Código-fonte principal do aplicativo.
-`src/test/java`: Código-fonte dos testes.
-`src/main/resources`: Recursos do aplicativo (ex.: arquivos de configuração).
-`src/test/resources`: Recursos dos testes.
-`target`: Diretório onde os arquivos compilados e pacotes são gerados.
+   - `src/main/java`: Código-fonte principal do aplicativo.
+   - `src/test/java`: Código-fonte dos testes.
+   - `src/main/resources`: Recursos do aplicativo (ex.: arquivos de configuração).
+   - `src/test/resources`: Recursos dos testes.
+   - `target`: Diretório onde os arquivos compilados e pacotes são gerados.
