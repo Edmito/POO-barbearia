@@ -16,9 +16,9 @@
     
         <HBox style="-fx-padding:5">
             <VBox prefWidth="10"></VBox>
-            <Label fx:id="dateLabel" text="Invoice Date" style="-fx-font-size: 12px;"/>
+            <Label fx:id="dateLabel" text="Data da Fatura" style="-fx-font-size: 12px;"/>
             <Region HBox.hgrow="ALWAYS" />
-            <Label fx:id="clientLabel" text="Client Name" style="-fx-font-size: 12px;"/>
+            <Label fx:id="clientLabel" text="Nome do Cliente" style="-fx-font-size: 12px;"/>
             <VBox prefWidth="10"></VBox>
         </HBox>
 
@@ -31,15 +31,15 @@
 
         <HBox style="-fx-padding:3">
             <VBox prefWidth="10"></VBox>
-            <Label text="Tax:" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+            <Label text="Taxa:" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
             <Region HBox.hgrow="ALWAYS" />
-            <Label fx:id="taxLabel" text="20" style="-fx-font-size: 12px;"/>
+            <Label fx:id="taxLabel" text="00" style="-fx-font-size: 12px;"/>
             <Label text=" %" style="-fx-font-size: 12px;"/>
             <VBox prefWidth="220"></VBox>
         </HBox>
         <HBox style="-fx-padding:3">
             <VBox prefWidth="10"></VBox>
-            <Label text="Discount:" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+            <Label text="Desconto:" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
             <Region HBox.hgrow="ALWAYS" />
             <Label fx:id="discountLabel" text="0" style="-fx-font-size: 12px;"/>
             <Label text=" %" style="-fx-font-size: 12px;"/>
@@ -50,7 +50,7 @@
             <Label text="Sub-total:" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
             <Region HBox.hgrow="ALWAYS" />
             <Label fx:id="subTotalLabel" text="0.0" style="-fx-font-size: 12px;"/>
-            <Label text=" DHs" style="-fx-font-size: 12px;"/>
+            <Label text=" R$" style="-fx-font-size: 12px;"/>
             <VBox prefWidth="220"></VBox>
         </HBox>
         <HBox style="-fx-padding:3">
@@ -58,7 +58,7 @@
             <Label text="Total:" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
             <Region HBox.hgrow="ALWAYS" />
             <Label fx:id="totalLabel" text="0.0" style="-fx-font-size: 12px;"/>
-            <Label text=" DHs" style="-fx-font-size: 12px;"/>
+            <Label text=" R$" style="-fx-font-size: 12px;"/>
             <VBox prefWidth="220"></VBox>
         </HBox>
 
@@ -70,34 +70,34 @@
                 <VBox prefWidth="10"></VBox>
                 <ComboBox fx:id="productField" prefWidth="200"/>
                 <Region HBox.hgrow="ALWAYS" />
-                <Button fx:id="addProduct" onAction="#onActionAddProductButton" prefWidth="150" text="Add Product"/>
+                <Button fx:id="addProduct" onAction="#onActionAddProductButton" prefWidth="150" text="Adicionar Produto"/>
                 <VBox prefWidth="10"></VBox>
             </HBox>
             <HBox prefWidth="10">
                 <VBox prefWidth="10"></VBox>
                 <ComboBox fx:id="serviceField" prefWidth="200"/>
                 <Region HBox.hgrow="ALWAYS" />
-                <Button fx:id="addService" onAction="#onActionAddServiceButton" prefWidth="150" text="Add Service"/>
+                <Button fx:id="addService" onAction="#onActionAddServiceButton" prefWidth="150" text="Adicionar Serviço"/>
                 <VBox prefWidth="10"></VBox>
             </HBox>
             <HBox prefWidth="10">
                 <VBox prefWidth="10"></VBox>
                 <Spinner fx:id="taxField" editable="true" prefWidth="200"/>
                 <Region HBox.hgrow="ALWAYS" />
-                <Button fx:id="updateTax" onAction="#onActionUpdateTaxButton" prefWidth="150" text="Apply Tax"/>
+                <Button fx:id="updateTax" onAction="#onActionUpdateTaxButton" prefWidth="150" text="Aplicar Taxa"/>
                 <VBox prefWidth="10"></VBox>
             </HBox>
             <HBox prefWidth="10">
                 <VBox prefWidth="10"></VBox>
                 <Spinner fx:id="discountField" editable="true" prefWidth="200"/>
                 <Region HBox.hgrow="ALWAYS" />
-                <Button fx:id="updateDiscount" onAction="#onActionUpdateDiscountButton" prefWidth="150" text="Apply Discount"/>
+                <Button fx:id="updateDiscount" onAction="#onActionUpdateDiscountButton" prefWidth="150" text="Aplicar Desconto"/>
                 <VBox prefWidth="10"></VBox>
             </HBox>
         </VBox>
 
         <HBox spacing="5" prefHeight="50" alignment="CENTER" style="-fx-padding:10">
-            <Button fx:id="saveButton" text="Save" onAction="#onActionSaveButton" style="-fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: GREEN; -fx-text-fill: WHITE ; -fx-font-weight: bold; -fx-font-size: 13;"/>
+            <Button fx:id="saveButton" text="Salvar" onAction="#onActionSaveButton" style="-fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: GREEN; -fx-text-fill: WHITE ; -fx-font-weight: bold; -fx-font-size: 13;"/>
             <Button fx:id="cancelButton" text="Cancel" onAction="#onActionCancelButton" style="-fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: RED; -fx-text-fill: WHITE ; -fx-font-weight: bold; -fx-font-size: 13; "/>
         </HBox>
 

@@ -57,13 +57,13 @@
 
                         <HBox fx:id="calendarHead2" alignment="CENTER" layoutX="28.0" layoutY="77.0" prefHeight="40.0" prefWidth="${screen.visualBounds.width/2+50}" spacing="48" style="-fx-background-color: LIGHTSEAGREEN;">
                             <children>
-                                <Text text="Sunday" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;"/>
-                                <Text text="Monday" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;" />
-                                <Text text="Tuesday" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;"/>
-                                <Text text="Wednesday" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;"/>
-                                <Text text="Thursday" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;"/>
-                                <Text text="Friday" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;"/>
-                                <Text text="Saturday" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;"/>
+                                <Text text="Domingo" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;"/>
+                                <Text text="Segunda" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;" />
+                                <Text text="Terça" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;"/>
+                                <Text text="Quarta" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;"/>
+                                <Text text="Quinta" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;"/>
+                                <Text text="Sexta" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;"/>
+                                <Text text="Sábado" textAlignment="CENTER" style="-fx-font-weight: bold; -fx-fill: white;"/>
                             </children>
                         </HBox>
 
@@ -79,7 +79,7 @@
                         <Button fx:id="searchButton" onAction="#onActionSearchButton" graphicTextGap="10" style="-fx-alignment: CENTER; -fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 20; -fx-padding: 0;" >
                                 <text>🔎</text>
                                 <tooltip> 
-                                <Tooltip text="Search">
+                                <Tooltip text="Procurar">
                                     <font>
                                         <Font size="13"/>
                                     </font>
@@ -98,7 +98,7 @@
                                     style="-fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 20; -fx-padding: 0;" >
                                 <text>⏮</text>
                                 <tooltip> 
-                                    <Tooltip text="Go Back">
+                                    <Tooltip text="Voltar">
                                         <font>
                                             <Font size="13"/>
                                         </font>
@@ -111,7 +111,7 @@
                                     style="-fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 20; -fx-padding: 0;" >
                                 <text>➕</text>
                                 <tooltip> 
-                                    <Tooltip text="Add">
+                                    <Tooltip text="Adicionar">
                                         <font>
                                             <Font size="13"/>
                                         </font>
@@ -122,7 +122,7 @@
                             <Button fx:id="invoiceButton" onAction="#onActionInvoiceButton" graphicTextGap="10" style="-fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 20; -fx-padding: 0;" >
                                 <text>📄</text>
                                 <tooltip> 
-                                    <Tooltip text="Generate invoice">
+                                    <Tooltip text="Gerar Fatura">
                                         <font>
                                             <Font size="13"/>
                                         </font>
@@ -134,7 +134,7 @@
                                     style="-fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 20; -fx-padding: 0;" >
                                 <text>📝</text>
                                 <tooltip> 
-                                    <Tooltip text="Edit">
+                                    <Tooltip text="Editar">
                                         <font>
                                             <Font size="13"/>
                                         </font>
@@ -146,7 +146,7 @@
                                     style="-fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 20; -fx-padding: 0;" >
                                 <text>🚫</text>
                                 <tooltip> 
-                                    <Tooltip text="Delete">
+                                    <Tooltip text="Deletar">
                                         <font>
                                             <Font size="13"/>
                                         </font>

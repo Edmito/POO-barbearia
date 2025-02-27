@@ -39,7 +39,7 @@
                     <TableColumn fx:id="name" prefWidth="${screen.visualBounds.width/2/5}" text="Nome" />
                      <TableColumn fx:id="description" prefWidth="${screen.visualBounds.width/2/5}" text="Descrição" />
                     <TableColumn fx:id="quantity" prefWidth="${screen.visualBounds.width/2/5}" text="Quantidade" />
-                    <TableColumn fx:id="price" prefWidth="${screen.visualBounds.width/2/5}" text="Price" />
+                    <TableColumn fx:id="price" prefWidth="${screen.visualBounds.width/2/5}" text="Preço" />
                   </columns>
                 </TableView>
               </VBox>

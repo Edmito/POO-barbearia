@@ -17,7 +17,7 @@
         <VBox spacing="20" style="-fx-padding:10"> <children>
         <Label fx:id="nameLabel" text="✂ Serviço:"/>
         <Label fx:id="descriptionLabel" text="📄 Descrição:"/>
-        <Label fx:id="priceLabel" text="💲 Price:"/>
+        <Label fx:id="priceLabel" text="R$ Preço:"/>
         </children> </VBox>
         <VBox spacing="10" style="-fx-padding:10"> <children> 
             <TextField fx:id="serviceNameField" promptText="Nome Serviço" prefWidth="200"/>

@@ -25,7 +25,7 @@
 
         <VBox spacing="20" style="-fx-padding:10"> <children> 
         <Label fx:id="quantityLabel" text="📊 Quantidade:"/>
-        <Label fx:id="priceLabel" text="💲 Preço:"/>
+        <Label fx:id="priceLabel" text="R$ Preço:"/>
         </children> </VBox>
         <VBox spacing="10" style="-fx-padding:10"> <children>
             <Spinner fx:id="quantityField" prefWidth="200" editable="true"/>

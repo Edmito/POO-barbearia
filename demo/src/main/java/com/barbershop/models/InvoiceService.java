@@ -17,6 +17,6 @@ public class InvoiceService {
 
     @Override
     public String toString() {
-        return service.getName() + "               " + service.getPrice() + " DHs";
+        return service.getName() + "               " + service.getPrice() + " R$";
     }
 }

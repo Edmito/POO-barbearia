@@ -48,7 +48,7 @@ public class GenerateInvoice implements Initializable {
 
     private List<Product> products = new ArrayList<>();
     private List<Service> services = new ArrayList<>();
-    private int tax = 20;
+    private int tax = 0;
     private int discount = 0;
     private double subTotal = 0.0;
     private double total = 0.0;
@@ -291,7 +291,7 @@ public class GenerateInvoice implements Initializable {
         });
 
         // Initialize Spinner for tax selection
-        SpinnerValueFactory<Integer> taxValueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(00, 30, 20);
+        SpinnerValueFactory<Integer> taxValueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(00, 30, 0);
         taxValueFactory.setWrapAround(true); // Enable wrapping around
         taxField.setValueFactory(taxValueFactory);
         taxField.getValueFactory().setConverter(new StringConverter<>() {

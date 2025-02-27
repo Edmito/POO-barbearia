@@ -12,14 +12,14 @@
 <?import javafx.scene.control.ToggleGroup?>
 
 <VBox fx:id="background" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.barbershop.views.calendar.EditEvent" prefWidth="700" prefHeight="300" alignment="CENTER" spacing="5" style= "-fx-background-color: whitesmoke">
-    <Label fx:id="titleLabel" text="Edit Event" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+    <Label fx:id="titleLabel" text="Editar Evento" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
 
     <HBox alignment="CENTER">
     <children>
         <VBox spacing="20" style="-fx-padding:10"> <children>
-        <Label fx:id="dateLabel" text="📅 Date:"/>
-        <Label fx:id="timeLabel" text="🕓 Time:"/>
-        <Label fx:id="serviceLabel" text="✂ Service:"/>
+        <Label fx:id="dateLabel" text="📅 Data:"/>
+        <Label fx:id="timeLabel" text="🕓 Hora:"/>
+        <Label fx:id="serviceLabel" text="✂ Serviço:"/>
         </children> </VBox>
         <VBox spacing="10" style="-fx-padding:10"> <children> 
         <DatePicker fx:id="dateField" prefWidth="200"/>
@@ -31,38 +31,38 @@
         </children> </VBox>
 
         <VBox spacing="20" style="-fx-padding:10"> <children> 
-        <Label fx:id="nameLabel" text="👤 Client Name:"/>
-        <Label fx:id="phoneLabel" text="📞 Client phone:"/>
-        <Label fx:id="descriptionLabel" text="📄 Description:"/>
+        <Label fx:id="nameLabel" text="👤 Nome Cliente:"/>
+        <Label fx:id="phoneLabel" text="📞 Telefone Cliente:"/>
+        <Label fx:id="descriptionLabel" text="📄 Descrição:"/>
         </children> </VBox>
         <VBox spacing="10" style="-fx-padding:10"> <children>
         <HBox spacing="10">
-            <TextField fx:id="clientFirstNameField" promptText="First Name" prefWidth="95"/>
-            <TextField fx:id="clientLastNameField" promptText="Last Name" prefWidth="95"/>
+            <TextField fx:id="clientFirstNameField" promptText="Primeiro Nome" prefWidth="95"/>
+            <TextField fx:id="clientLastNameField" promptText="Sobrenome" prefWidth="95"/>
         </HBox>
-        <TextField fx:id="clientPhoneField" promptText="Phone Number" prefWidth="200"/>
-        <TextField fx:id="descriptionField" promptText="Description" prefWidth="200"/>
+        <TextField fx:id="clientPhoneField" promptText="Telefone" prefWidth="200"/>
+        <TextField fx:id="descriptionField" promptText="Descrição" prefWidth="200"/>
         </children> </VBox>
     </children>
     </HBox>        
     
     <VBox alignment="CENTER">
-    <Label fx:id="stateLabel" text="✅ State:"/>
+    <Label fx:id="stateLabel" text="✅ Status:"/>
     <HBox spacing="10" style="-fx-padding:10" alignment="CENTER">
         <children>
-            <RadioButton fx:id="radioCanceled" text="Canceled" style="-fx-text-fill:GREY">
+            <RadioButton fx:id="radioCanceled" text="Cancelado" style="-fx-text-fill:GREY">
                 <toggleGroup>
                     <ToggleGroup fx:id="type" />
                 </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="radioDone" text="Done" toggleGroup="$type" style="-fx-text-fill:GREEN"/>
-            <RadioButton fx:id="radioNotDone" text="Not Done" toggleGroup="$type" style="-fx-text-fill:RED"/>
+            <RadioButton fx:id="radioDone" text="Feito" toggleGroup="$type" style="-fx-text-fill:GREEN"/>
+            <RadioButton fx:id="radioNotDone" text="Não Feito" toggleGroup="$type" style="-fx-text-fill:RED"/>
         </children>
     </HBox>
     </VBox>
 
     <HBox spacing="5" alignment="CENTER" style="-fx-padding:10">
-        <Button fx:id="saveButton" text="Save Changes" onAction="#onActionSaveButton" style="-fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: GREEN; -fx-text-fill: WHITE ; -fx-font-weight: bold; -fx-font-size: 13;"/>
-        <Button fx:id="cancelButton" text="Cancel" onAction="#onActionCancelButton" style="-fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: RED; -fx-text-fill: WHITE ; -fx-font-weight: bold; -fx-font-size: 13; "/>
+        <Button fx:id="saveButton" text="Salvar" onAction="#onActionSaveButton" style="-fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: GREEN; -fx-text-fill: WHITE ; -fx-font-weight: bold; -fx-font-size: 13;"/>
+        <Button fx:id="cancelButton" text="Cancelar" onAction="#onActionCancelButton" style="-fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: RED; -fx-text-fill: WHITE ; -fx-font-weight: bold; -fx-font-size: 13; "/>
     </HBox>
 </VBox>

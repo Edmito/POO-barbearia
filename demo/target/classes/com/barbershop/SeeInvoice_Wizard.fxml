@@ -18,7 +18,7 @@
             <VBox prefWidth="10"></VBox>
             <Label fx:id="dateLabel" text="Invoice Date" style="-fx-font-size: 12px;"/>
             <Region HBox.hgrow="ALWAYS" />
-            <Label fx:id="clientLabel" text="Client Name" style="-fx-font-size: 12px;"/>
+            <Label fx:id="clientLabel" text="Nome do Cliente" style="-fx-font-size: 12px;"/>
             <VBox prefWidth="10"></VBox>
         </HBox>
 
@@ -31,15 +31,15 @@
 
         <HBox style="-fx-padding:3">
             <VBox prefWidth="10"></VBox>
-            <Label text="Tax:" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+            <Label text="Taxa:" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
             <Region HBox.hgrow="ALWAYS" />
-            <Label fx:id="taxLabel" text="20" style="-fx-font-size: 12px;"/>
+            <Label fx:id="taxLabel" text="00" style="-fx-font-size: 12px;"/>
             <Label text=" %" style="-fx-font-size: 12px;"/>
             <VBox prefWidth="220"></VBox>
         </HBox>
         <HBox style="-fx-padding:3">
             <VBox prefWidth="10"></VBox>
-            <Label text="Discount:" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+            <Label text="Desconto:" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
             <Region HBox.hgrow="ALWAYS" />
             <Label fx:id="discountLabel" text="0" style="-fx-font-size: 12px;"/>
             <Label text=" %" style="-fx-font-size: 12px;"/>
@@ -50,7 +50,7 @@
             <Label text="Sub-total:" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
             <Region HBox.hgrow="ALWAYS" />
             <Label fx:id="subTotalLabel" text="0.0" style="-fx-font-size: 12px;"/>
-            <Label text=" DHs" style="-fx-font-size: 12px;"/>
+            <Label text=" R$" style="-fx-font-size: 12px;"/>
             <VBox prefWidth="220"></VBox>
         </HBox>
         <HBox style="-fx-padding:3">
@@ -58,7 +58,7 @@
             <Label text="Total:" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
             <Region HBox.hgrow="ALWAYS" />
             <Label fx:id="totalLabel" text="0.0" style="-fx-font-size: 12px;"/>
-            <Label text=" DHs" style="-fx-font-size: 12px;"/>
+            <Label text=" R$" style="-fx-font-size: 12px;"/>
             <VBox prefWidth="220"></VBox>
         </HBox>
 

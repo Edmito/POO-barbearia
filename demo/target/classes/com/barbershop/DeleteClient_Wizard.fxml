@@ -10,10 +10,10 @@
 <?import javafx.scene.control.DatePicker?>
 
 <VBox fx:id="background" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.barbershop.views.clients.DeleteClient" prefWidth="300" prefHeight="300" alignment="CENTER" spacing="5" style= "-fx-background-color: whitesmoke">
-    <Label  fx:id="titleLabel" text="Delete This Client ?" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+    <Label  fx:id="titleLabel" text="Deletar Cadastro ?" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
 
     <HBox spacing="5" alignment="CENTER" style="-fx-padding:10">
-        <Button fx:id="deleteButton" text="Delete Client" onAction="#onActionDeleteButton" style="-fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: GREEN; -fx-text-fill: WHITE ; -fx-font-weight: bold; -fx-font-size: 13;"/>
-        <Button fx:id="cancelButton" text="Cancel" onAction="#onActionCancelButton" style="-fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: RED; -fx-text-fill: WHITE ; -fx-font-weight: bold; -fx-font-size: 13; "/>
+        <Button fx:id="deleteButton" text="Deletar Cadastro" onAction="#onActionDeleteButton" style="-fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: GREEN; -fx-text-fill: WHITE ; -fx-font-weight: bold; -fx-font-size: 13;"/>
+        <Button fx:id="cancelButton" text="Cancelar" onAction="#onActionCancelButton" style="-fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: RED; -fx-text-fill: WHITE ; -fx-font-weight: bold; -fx-font-size: 13; "/>
     </HBox>
 </VBox>

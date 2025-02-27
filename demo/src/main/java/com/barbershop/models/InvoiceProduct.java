@@ -38,7 +38,7 @@ public class InvoiceProduct {
 
     @Override
     public String toString() {
-        return product.getName() + "               " + price + " DHs"
+        return product.getName() + "               " + price + " R$"
                 + "\n" + product.getPrice() + "              x" + quantity;
     }
 }
