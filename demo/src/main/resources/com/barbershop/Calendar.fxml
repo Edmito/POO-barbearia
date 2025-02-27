@@ -75,7 +75,7 @@
                 <children>
                     <HBox fx:id="topMenu" alignment="CENTER_LEFT" prefHeight="50" spacing="5" style="-fx-background-color: lightseagreen; -fx-padding: 10">
                     <children>
-                        <TextField fx:id="searchField" prefWidth="${screen.visualBounds.width/3-50}" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" promptText="Search..." style="-fx-background-color: whitesmoke"/>  
+                        <TextField fx:id="searchField" prefWidth="${screen.visualBounds.width/3-50}" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" promptText="Procurar..." style="-fx-background-color: whitesmoke"/>  
                         <Button fx:id="searchButton" onAction="#onActionSearchButton" graphicTextGap="10" style="-fx-alignment: CENTER; -fx-background-color: transparent; -fx-text-fill: whitesmoke; -fx-font-weight: bold; -fx-font-size: 20; -fx-padding: 0;" >
                                 <text>🔎</text>
                                 <tooltip> 

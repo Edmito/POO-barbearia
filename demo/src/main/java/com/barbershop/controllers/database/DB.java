@@ -11,7 +11,7 @@ import java.util.List;
 public class DB {
     private static final String MYSQL_URL = "jdbc:mysql://localhost:3306/";
     private static final String USER = "root";
-    private static final String PASSWORD = "1234";
+    private static final String PASSWORD = "";
 
     /**
      * CREATE a DATABASE.
