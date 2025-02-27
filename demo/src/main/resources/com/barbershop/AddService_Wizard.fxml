@@ -10,25 +10,25 @@
 <?import javafx.scene.control.DatePicker?>
 
 <VBox fx:id="background" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.barbershop.views.services.AddService" prefWidth="700" prefHeight="300" alignment="CENTER" spacing="5" style= "-fx-background-color: whitesmoke">
-    <Label fx:id="titleLabel"  text="Add New Service" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+    <Label fx:id="titleLabel"  text="Adicionar Novo Serviço" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
 
     <HBox alignment="CENTER">
     <children>
         <VBox spacing="20" style="-fx-padding:10"> <children>
-        <Label fx:id="nameLabel" text="✂ Service Name:"/>
-        <Label fx:id="descriptionLabel" text="📄 Description:"/>
-        <Label fx:id="priceLabel" text="💲 Price:"/>
+        <Label fx:id="nameLabel" text="✂ Nome Serviço:"/>
+        <Label fx:id="descriptionLabel" text="📄 Descrição:"/>
+        <Label fx:id="priceLabel" text="💲 Preço:"/>
         </children> </VBox>
         <VBox spacing="10" style="-fx-padding:10"> <children> 
-            <TextField fx:id="serviceNameField" promptText="Service Name" prefWidth="200"/>
-            <TextField fx:id="descriptionField" promptText="Description" prefWidth="200"/>
+            <TextField fx:id="serviceNameField" promptText="Nome Serviço" prefWidth="200"/>
+            <TextField fx:id="descriptionField" promptText="Descrição" prefWidth="200"/>
             <Spinner fx:id="priceField" prefWidth="200" editable="true"/>
         </children> </VBox>
     </children>
     </HBox>
 
     <HBox spacing="5" alignment="CENTER" style="-fx-padding:10">
-        <Button fx:id="saveButton" text="Add Service" onAction="#onActionSaveButton" style="-fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: GREEN; -fx-text-fill: WHITE ; -fx-font-weight: bold; -fx-font-size: 13;"/>
-        <Button fx:id="cancelButton" text="Cancel" onAction="#onActionCancelButton" style="-fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: RED; -fx-text-fill: WHITE ; -fx-font-weight: bold; -fx-font-size: 13; "/>
+        <Button fx:id="saveButton" text="Adicionar Serviço" onAction="#onActionSaveButton" style="-fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: GREEN; -fx-text-fill: WHITE ; -fx-font-weight: bold; -fx-font-size: 13;"/>
+        <Button fx:id="cancelButton" text="Cancelar" onAction="#onActionCancelButton" style="-fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: RED; -fx-text-fill: WHITE ; -fx-font-weight: bold; -fx-font-size: 13; "/>
     </HBox>
 </VBox>
