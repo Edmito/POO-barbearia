@@ -277,8 +277,6 @@ public class Calendar implements Initializable {
     //innitialize the calendar
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // Definir o Locale para português
-        Locale.setDefault(Locale.forLanguageTag("pt-BR"));
 
         // Configurações iniciais
         topMenu.setStyle("-fx-background-color: " + Colors.primary + "; -fx-padding: 10");
@@ -309,7 +307,7 @@ public class Calendar implements Initializable {
 
         // Exibir o ano e o mês em português
         year.setText(String.valueOf(dateFocus.getYear()));
-        DateTimeFormatter monthFormatter = DateTimeFormatter.ofPattern("MMMM", Locale.forLanguageTag("pt-BR"));
+        DateTimeFormatter monthFormatter = DateTimeFormatter.ofPattern("MMMM");
         month.setText(dateFocus.format(monthFormatter));
 
         // Estilo do título do calendário

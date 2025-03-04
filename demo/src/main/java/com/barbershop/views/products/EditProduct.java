@@ -2,6 +2,8 @@ package com.barbershop.views.products;
 
 import java.io.IOException;
 import java.net.URL;
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -112,10 +114,10 @@ public class EditProduct implements Initializable {
         newProduct = Products.selectedProduct;
         productNameField.setText(Products.selectedProduct.getName());
         descriptionField.setText(Products.selectedProduct.getDescription());
-        // Initialize Spinner for hour selection
-        SpinnerValueFactory<Integer> hourValueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(00, 100, Products.selectedProduct.getQuantity());
-        hourValueFactory.setWrapAround(true); // Enable wrapping around
-        quantityField.setValueFactory(hourValueFactory);
+        // Initialize Spinner for quantity selection
+        SpinnerValueFactory<Integer> quantityValueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, Products.selectedProduct.getQuantity());
+        quantityValueFactory.setWrapAround(true); // Enable wrapping around
+        quantityField.setValueFactory(quantityValueFactory);
         quantityField.getValueFactory().setConverter(new StringConverter<>() {
             @Override
             public String toString(Integer value) {
@@ -128,21 +130,27 @@ public class EditProduct implements Initializable {
             }
         });
 
-        // Initialize Spinner for minites selection
+        // Initialize Spinner for price selection
         SpinnerValueFactory<Double> priceValueFactory = new SpinnerValueFactory.DoubleSpinnerValueFactory(0.0, 999.99, Products.selectedProduct.getPrice());
         priceValueFactory.setWrapAround(true); // Enable wrapping around
         priceField.setValueFactory(priceValueFactory);
 
-        priceField.getValueFactory().setConverter(new StringConverter<Double>() {
+        NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.getDefault());
+        priceField.getValueFactory().setConverter(new StringConverter<>() {
             @Override
             public String toString(Double value) {
                 // Format value to "00.00" with dot as the decimal separator
-                return String.format(Locale.forLanguageTag("pt-BR"), "%.2f", value);
+                return numberFormat.format(value);
             }
 
             @Override
             public Double fromString(String value) {
-                return Double.valueOf(value); // Convert back to Double
+                try {
+                    return numberFormat.parse(value).doubleValue();
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                    return 0.0;
+                }
             }
         });
         HoverController.addPopUpHoverEffect(saveButton, "GREEN");

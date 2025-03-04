@@ -9,7 +9,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.Region?>
 
-<VBox fx:id="background" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.barbershop.views.calendar.GenerateInvoice" prefWidth="400" prefHeight="600" alignment="CENTER" spacing="5" style= "-fx-background-color: whitesmoke">
+<VBox fx:id="background" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.barbershop.views.calendar.GenerateInvoice" prefWidth="450" prefHeight="600" alignment="CENTER" spacing="5" style= "-fx-background-color: whitesmoke">
     
     <VBox style="-fx-background-color: white">
     <children>
@@ -22,9 +22,15 @@
             <VBox prefWidth="10"></VBox>
         </HBox>
 
-        <HBox prefHeight="240">
+        <HBox prefHeight="280" style="-fx-padding: 0 0 0 10">
+            <VBox spacing="5">
+            <Label text="Produtos" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
             <ListView fx:id="productsList" style="-fx-background-color: white"></ListView>
+            </VBox>
+            <VBox spacing="5">
+            <Label text="Serviços" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
             <ListView fx:id="servicesList" style="-fx-background-color: white"></ListView>
+            </VBox>
         </HBox>
 
         <VBox prefHeight="20" style="-fx-background-color: whitesmoke"></VBox>

@@ -1,6 +1,5 @@
 package com.barbershop;
 
-import com.barbershop.controllers.database.DB;
 import com.barbershop.controllers.database.GetData;
 import com.barbershop.controllers.database.InitializeDatabase;
 import com.barbershop.controllers.style.Colors;

@@ -19,6 +19,8 @@ import javafx.util.StringConverter;
 
 import java.io.IOException;
 import java.net.URL;
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -127,16 +129,22 @@ public class AddProduct implements Initializable {
         priceValueFactory.setWrapAround(true); // Enable wrapping around
         priceField.setValueFactory(priceValueFactory);
 
-        priceField.getValueFactory().setConverter(new StringConverter<Double>() {
+        NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.getDefault());
+        priceField.getValueFactory().setConverter(new StringConverter<>() {
             @Override
             public String toString(Double value) {
                 // Format value to "00.00" with dot as the decimal separator
-                return String.format(Locale.forLanguageTag("pt-BR"), "%.2f", value);
+                return numberFormat.format(value);
             }
 
             @Override
             public Double fromString(String value) {
-                return Double.valueOf(value); // Convert back to Double
+                try {
+                    return numberFormat.parse(value).doubleValue();
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                    return 0.0;
+                }
             }
         });
 
